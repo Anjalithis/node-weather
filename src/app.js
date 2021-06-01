@@ -3,7 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
-const PORT = process.env.PORT || 3000;
+
 
 const app = express();
 
@@ -19,7 +19,7 @@ hbs.registerPartials(partialPath);
 
 app.use(express.static(publicDirectoryPath));
 
-app.get('/' , (req,res)=>{
+app.get('' , (req,res)=>{
     res.render('index',{
         title:"Weather",
         name:"Anjali Singh ",
@@ -73,6 +73,7 @@ app.get('*', (req , res)=>{
 
     })
 })
-app.listen(PORT , ()=>{
-    console.log("listening to port:3000!");
+
+app.listen(3000 , ()=>{
+    console.log("listening to port:!");
 })
