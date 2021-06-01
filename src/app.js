@@ -19,7 +19,7 @@ hbs.registerPartials(partialPath);
 
 app.use(express.static(publicDirectoryPath));
 
-app.get('' , (req,res)=>{
+app.get('/' , (req,res)=>{
     res.render('index',{
         title:"Weather",
         name:"Anjali Singh ",
